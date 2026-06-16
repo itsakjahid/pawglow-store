@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PawGlow | Self-Cleaning Pet Grooming Brush</title>
+    <style>
+        /* Basic Reset */
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+        }
+        body { 
+            line-height: 1.6; 
+            color: #333; 
+            background-color: #fcfcfc; 
+        }
+        
+        /* Header */
+        header { 
+            background: #ffffff; 
+            padding: 20px; 
+            text-align: center; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05); 
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        header h1 { 
+            color: #ff6b6b; 
+            font-size: 30px; 
+            font-weight: 800; 
+            letter-spacing: 1px;
+        }
+        
+        /* Hero Section */
+        .hero { 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 60px 5%; 
+            background: linear-gradient(135deg, #ffeef2 0%, #fff 100%);
+            gap: 40px;
+        }
+        .hero-text {
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px;
+        }
+        .hero h2 { 
+            font-size: 38px; 
+            margin-bottom: 15px; 
+            color: #2c3e50; 
+            line-height: 1.2;
+        }
+        .hero p { 
+            font-size: 18px; 
+            margin-bottom: 25px; 
+            color: #555; 
+        }
+        .price { 
+            font-size: 32px; 
+            font-weight: 800; 
+            color: #e74c3c; 
+            margin-bottom: 25px; 
+        }
+        .hero-image {
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px;
+            text-align: center;
+        }
+        .hero-image img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        /* Call to Action Button */
+        .btn { 
+            display: inline-block; 
+            background: #ff6b6b; 
+            color: #ffffff; 
+            padding: 15px 40px; 
+            text-decoration: none; 
+            font-size: 20px; 
+            border-radius: 50px; 
+            font-weight: bold; 
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+            transition: all 0.3s ease; 
+        }
+        .btn:hover { 
+            background: #ff4757; 
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 107, 107, 0.6);
+        }
+        
+        /* Features Section */
+        .features-title {
+            text-align: center;
+            margin-top: 60px;
+            font-size: 32px;
+            color: #2c3e50;
+        }
+        .features { 
+            display: flex; 
+            flex-wrap: wrap; 
+            justify-content: center; 
+            gap: 30px; 
+            padding: 40px 5%; 
+            max-width: 1200px; 
+            margin: auto; 
+            margin-bottom: 40px;
+        }
+        .feature-card { 
+            background: #ffffff; 
+            padding: 30px; 
+            border-radius: 15px; 
+            text-align: center; 
+            width: calc(33.333% - 30px); 
+            min-width: 280px; 
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05); 
+            transition: transform 0.3s;
+        }
+        .feature-card:hover {
+            transform: translateY(-8px);
+        }
+        .feature-card img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .feature-card h3 { 
+            margin-bottom: 12px; 
+            color: #ff6b6b; 
+            font-size: 22px;
+        }
+        .feature-card p {
+            color: #666;
+            font-size: 16px;
+        }
+        
+        /* Footer */
+        footer { 
+            text-align: center; 
+            padding: 30px; 
+            background: #2c3e50; 
+            color: #ffffff; 
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 40px 20px;
+            }
+            .features { 
+                flex-direction: column; 
+                align-items: center; 
+            }
+            .feature-card { 
+                width: 100%; 
+                max-width: 400px; 
+            }
+            .hero h2 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>PawGlow 🐾</h1>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h2>Say Goodbye to Messy Pet Hair!</h2>
+            <p>The ultimate Self-Cleaning Grooming Brush. Keep your pet's coat shiny and your home fur-free with just a push of a button. Loved by pets, trusted by owners.</p>
+            <div class="price">$19.99 <span style="font-size: 18px; text-decoration: line-through; color: #999;">$35.00</span></div>
+            <a href="#buy-now" class="btn">Order Now</a>
+        </div>
+        <div class="hero-image">
+            <!-- Demo Image from Unsplash -->
+            <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Happy Fluffy Dog">
+        </div>
+    </section>
+
+    <h2 class="features-title">Why Choose PawGlow?</h2>
+    
+    <section class="features">
+        <div class="feature-card">
+            <!-- Icon placeholder -->
+            <img src="https://images.unsplash.com/photo-1537151608805-ea10bf144674?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Clean">
+            <h3>🔘 One-Click Clean</h3>
+            <p>Simply push the button and the bristles retract, making it incredibly easy to wipe away all the collected hair instantly.</p>
+        </div>
+        <div class="feature-card">
+            <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Gentle">
+            <h3>❤️ Gentle on Skin</h3>
+            <p>Designed with round massage particles that won't scratch your pet's skin, promoting healthy blood circulation.</p>
+        </div>
+        <div class="feature-card">
+            <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Ergonomic">
+            <h3>🖐️ Ergonomic Handle</h3>
+            <p>Comfortable anti-slip grip prevents wrist strain, so you can brush your furry friend for as long as they want.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 PawGlow. All rights reserved. Free Worldwide Shipping!</p>
+    </footer>
+
+</body>
+</html>
