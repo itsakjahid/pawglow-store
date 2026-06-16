@@ -23,7 +23,7 @@
         .hero-image img { width: 100%; border-radius: 20px; box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
         
         /* Call to Action Button */
-        .btn { display: inline-block; background: #1abc9c; color: #ffffff; padding: 15px 40px; text-decoration: none; font-size: 20px; border-radius: 50px; font-weight: bold; box-shadow: 0 4px 15px rgba(26, 188, 156, 0.4); transition: all 0.3s ease; }
+        .btn { display: inline-block; background: #1abc9c; color: #ffffff; padding: 15px 40px; text-decoration: none; font-size: 20px; border-radius: 50px; font-weight: bold; box-shadow: 0 4px 15px rgba(26, 188, 156, 0.4); transition: all 0.3s ease; cursor: pointer; border: none; }
         .btn:hover { background: #16a085; transform: translateY(-3px); box-shadow: 0 8px 20px rgba(26, 188, 156, 0.6); }
         
         /* Features Section */
@@ -37,6 +37,17 @@
         
         /* Footer */
         footer { text-align: center; padding: 30px; background: #2c3e50; color: #ffffff; }
+
+        /* Checkout Modal CSS */
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 1000; align-items: center; justify-content: center; backdrop-filter: blur(5px); }
+        .modal-content { background: #fff; padding: 40px; border-radius: 20px; width: 90%; max-width: 400px; text-align: center; box-shadow: 0 20px 50px rgba(0,0,0,0.2); }
+        .modal-content h3 { color: #2c3e50; margin-bottom: 10px; font-size: 24px; }
+        .modal-content p { color: #e74c3c; font-weight: bold; margin-bottom: 20px; font-size: 18px; }
+        .modal-content input { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 8px; font-size: 16px; }
+        .confirm-btn { background: #1abc9c; color: #fff; padding: 12px; width: 100%; border: none; border-radius: 8px; font-size: 18px; font-weight: bold; cursor: pointer; margin-top: 10px; transition: 0.3s; }
+        .confirm-btn:hover { background: #16a085; }
+        .close-btn { background: #ecf0f1; color: #7f8c8d; padding: 10px; width: 100%; border: none; border-radius: 8px; font-size: 16px; cursor: pointer; margin-top: 10px; transition: 0.3s; }
+        .close-btn:hover { background: #bdc3c7; color: #2c3e50; }
         
         /* Responsive Design */
         @media (max-width: 768px) { .hero { flex-direction: column; text-align: center; padding: 40px 20px; } .features { flex-direction: column; align-items: center; } .feature-card { width: 100%; max-width: 400px; } .hero h2 { font-size: 30px; } }
@@ -53,7 +64,8 @@
             <h2>Say Goodbye to Messy Pet Hair!</h2>
             <p>The ultimate Self-Cleaning Grooming Slicker Brush. Keep your pet's coat shiny and your home fur-free with just a push of a button. Loved by pets, trusted by owners.</p>
             <div class="price">$19.99 <span style="font-size: 18px; text-decoration: line-through; color: #999;">$35.00</span></div>
-            <a href="#buy-now" class="btn">Order Now</a>
+            <!-- Modified Order Button to trigger Modal -->
+            <button class="btn" onclick="document.getElementById('checkoutModal').style.display='flex'">Order Now</button>
         </div>
         <div class="hero-image">
             <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Happy Fluffy Dog">
@@ -64,7 +76,6 @@
     
     <section class="features">
         <div class="feature-card">
-            <!-- 100% Working Static Image -->
             <img src="https://placehold.co/200x200/1abc9c/ffffff?text=Clean" alt="Clean">
             <h3>🔘 One-Click Clean</h3>
             <p>Simply push the button and the pins retract, making it incredibly easy to wipe away all the collected hair instantly in one piece.</p>
@@ -84,6 +95,19 @@
     <footer>
         <p>&copy; 2026 PawGlow. All rights reserved. Free Worldwide Shipping!</p>
     </footer>
+
+    <!-- Custom Checkout Modal -->
+    <div id="checkoutModal" class="modal">
+        <div class="modal-content">
+            <h3>Secure Checkout</h3>
+            <p>PawGlow Brush - $19.99</p>
+            <input type="text" placeholder="Full Name" required>
+            <input type="text" placeholder="Delivery Address" required>
+            <input type="tel" placeholder="Phone Number" required>
+            <button class="confirm-btn" onclick="alert('Success! Your order has been placed. (Note: This is a portfolio demo project.)'); document.getElementById('checkoutModal').style.display='none';">Confirm Order</button>
+            <button class="close-btn" onclick="document.getElementById('checkoutModal').style.display='none'">Cancel</button>
+        </div>
+    </div>
 
 </body>
 </html>
